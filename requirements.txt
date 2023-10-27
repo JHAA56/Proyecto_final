@@ -4,5 +4,5 @@ pandas
 pydeck
 streamlit
 openpyxl>=3.0.10
-py -m pip install matplotlib.pyplot
-matplotlib.pyplot
+matplotlib
+
