@@ -1,5 +1,5 @@
-!pip install matplotlib
-!pip install squarify
+#!pip install matplotlib
+#!pip install squarify
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +13,7 @@ df_ventas.columns = nuevos_nombres
 
 
 #2 Limpieza
-Despues de cargar los datos analizamos que datos faltan o deben ser convertidos. Aca cogimos los nombres de las columnas y los categorizamos tipo string para que puedan ser manejados mas facilmente.
+#Despues de cargar los datos analizamos que datos faltan o deben ser convertidos. Aca cogimos los nombres de las columnas y los categorizamos tipo string para que puedan ser manejados mas facilmente.
 
 #seleccionar columnas del dataframe y guardarlas como tipo de dato str
 df_ventas['NOMBRE_JUEGO'] = df_ventas['NOMBRE_JUEGO'].astype(str)
