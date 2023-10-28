@@ -118,14 +118,10 @@ ventas_por_editorial = df_ventas.groupby('DISTRIBUIDOR')['TOTAL'].sum()
 top_15_editoriales = pd.DataFrame({'Distribuidor': ['Distribuidor A', 'Distribuidor B', 'Distribuidor C'],
                                   'Venta total': [100, 200, 300]})
 
-# Crear la gráfica de burbujas con etiquetas
-fig, ax = plt.subplots(figsize=(12, 8))
-colors = np.random.rand(len(top_15_editoriales))
-for i, row in top_15_editoriales.iterrows():
-    ax.scatter(row['Distribuidor'], row['Venta total'], s=row['Venta total']*5, c=colors[i], alpha=0.6)
-    ax.text(row['Distribuidor'], row['Venta total'], row['Venta total'], ha='center', va='center')
-
-plt.title('Gráfico de burbujas de los 15 principales distribuidores por ventas totales')
+# Crear la gráfica
+fig, ax = plt.subplots(figsize=(12, 6))
+top_15_editoriales.plot(x='Distribuidor', y='Venta total', kind='bar', ax=ax)
+plt.title('Top 15 Distribuidor por Total venta')
 plt.xlabel('Distribuidor')
 plt.ylabel('Venta total')
 plt.xticks(rotation=90)
