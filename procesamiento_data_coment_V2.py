@@ -155,6 +155,9 @@ plt.show()
 ventas_por_genero = df_ventas.groupby('GENERO')['TOTAL'].sum()
 
 # Ordenar en orden descendente y seleccionar las 20 primeras
+# Suponiendo que tienes un DataFrame llamado top_15_editoriales que contiene los datos para la gráfica
+
+# Reemplaza top_15_editoriales con tus propios datos
 top_15_editoriales = pd.DataFrame({'Distribuidor': ['Distribuidor A', 'Distribuidor B', 'Distribuidor C'],
                                   'Venta total': [100, 200, 300]})
 
