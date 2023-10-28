@@ -197,8 +197,8 @@ plt.xticks(rotation=90)
 
 plt.show()
 
-!pip install matplotlib
-!pip install squarify
+#!pip install matplotlib
+#!pip install squarify
 
 import pandas as pd
 import matplotlib.pyplot as plt
