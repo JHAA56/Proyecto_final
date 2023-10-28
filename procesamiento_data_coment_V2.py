@@ -156,16 +156,21 @@ plt.show()
 ventas_por_genero = df_ventas.groupby('GENERO')['TOTAL'].sum()
 
 # Ordenar en orden descendente y seleccionar las 20 primeras
-top_15_genero = ventas_por_genero.sort_values(ascending=False).head(15)
+top_15_editoriales = pd.DataFrame({'Distribuidor': ['Distribuidor A', 'Distribuidor B', 'Distribuidor C'],
+                                  'Venta total': [100, 200, 300]})
 
-# Crear el gráfico de barras
-top_15_genero.plot(kind='bar', figsize=(12, 6))
-plt.title('Top 15 Genero por Venta total')
-plt.xlabel('Genero')
+# Crear la gráfica
+fig, ax = plt.subplots(figsize=(12, 8))
+colors = np.random.rand(len(top_15_editoriales))
+ax.scatter(top_15_editoriales.index, top_15_editoriales['Venta total'], s=top_15_editoriales['Venta total']*5, c=colors, alpha=0.6)
+
+plt.title('Gráfico de burbujas de los 15 principales distribuidores por ventas totales')
+plt.xlabel('Distribuidor')
 plt.ylabel('Venta total')
 plt.xticks(rotation=90)
 
-plt.show()
+# Mostrar la gráfica en Streamlit
+st.pyplot(fig)
 
 import pandas as pd
 import matplotlib.pyplot as plt
