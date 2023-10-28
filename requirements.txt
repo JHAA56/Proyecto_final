@@ -6,3 +6,4 @@ streamlit
 openpyxl>=3.0.10
 matplotlib
 squarify
+streamlit
