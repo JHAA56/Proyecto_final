@@ -1,7 +1,13 @@
 #!pip install matplotlib
 #!pip install squarify
 
+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import squarify
 import matplotlib.pyplot as plt
 ruta_df = r"Ventas_Videojuegos (2).xlsx"
 # Carga el archivo Excel en un DataFrame de pandas
@@ -97,9 +103,7 @@ plt.xticks(rotation=90)
 
 plt.show()
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+
 
 # Asegúrate de haber ejecutado previamente el código de agrupación y preparación de datos.
 
@@ -134,8 +138,6 @@ plt.xticks(rotation=90)
 
 plt.show()
 
-import pandas as pd
-import matplotlib.pyplot as plt
 
 # Asegúrate de haber ejecutado previamente el código de agrupación y preparación de datos.
 
@@ -169,9 +171,7 @@ plt.xticks(rotation=90)
 
 plt.show()
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import squarify
+
 
 # Asegúrate de haber ejecutado previamente el código de agrupación y preparación de datos.
 
@@ -218,8 +218,7 @@ plt.xticks(rotation=90)
 
 plt.show()
 
-import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Asegúrate de haber ejecutado previamente el código de agrupación y preparación de datos.
 
