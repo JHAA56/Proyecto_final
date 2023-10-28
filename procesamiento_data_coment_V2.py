@@ -118,13 +118,15 @@ ventas_por_editorial = df_ventas.groupby('DISTRIBUIDOR')['TOTAL'].sum()
 top_15_editoriales = ventas_por_editorial.sort_values(ascending=False).head(15)
 
 # Crear el gráfico de barras
-top_15_editoriales.plot(kind='bar', figsize=(12, 6))
+fig, ax = plt.subplots(figsize=(12, 6))
+top_15_editoriales.plot(x='Distribuidor', y='Venta total', kind='bar', ax=ax)
 plt.title('Top 15 Distribuidor por Total venta')
 plt.xlabel('Distribuidor')
 plt.ylabel('Venta total')
 plt.xticks(rotation=90)
-st.pyplot()
-plt.show()
+
+# Mostrar la gráfica en Streamlit
+st.pyplot(fig)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
   
