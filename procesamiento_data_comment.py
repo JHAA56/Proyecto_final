@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import squarify
 import matplotlib.pyplot as plt
+import streamlit
 
 ruta_df = r"Ventas_Videojuegos (2).xlsx"
 # Carga el archivo Excel en un DataFrame de pandas
