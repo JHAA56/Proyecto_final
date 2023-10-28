@@ -220,6 +220,8 @@ import squarify
 
 # Supongamos que el código previo ha creado top_15_anio correctamente
 # Definir top_15_anio como un diccionario para simular el caso
+# Datos del gráfico de Treemap
+
 top_15_anio = {
     2010: 500,
     2011: 700,
@@ -239,13 +241,14 @@ top_15_anio = {
 df = pd.DataFrame(list(top_15_anio.items()), columns=['Año de Lanzamiento', 'Ventas Globales'])
 df = df.sort_values('Ventas Globales', ascending=False)
 
-# Crear el gráfico de treemap
-plt.figure(figsize=(10, 6))
+# Crear el gráfico de Treemap
+fig = plt.figure(figsize=(10, 6))
 squarify.plot(sizes=df['Ventas Globales'], label=df.apply(lambda x: f"{x[0]}\n({x[1]})", axis=1), alpha=0.6)
 plt.title('Gráfico de Treemap de Ventas Globales por Año de Lanzamiento')
 plt.axis('off')
-plt.show()
 
+# Mostrar el gráfico en Streamlit
+st.pyplot(fig)
 # Agrupar por la columna "Editorial" y sumar las ventas globales
 ventas_por_plat = df_ventas.groupby('CONSOLA')['TOTAL'].sum()
 
