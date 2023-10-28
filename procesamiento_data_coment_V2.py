@@ -14,7 +14,7 @@ La base de datos que cargamos inicialmente contiene informacion sobre las ventas
 
 Lo primero que realizamos es revisar la información encontrada, familiarizarnos con los datos.
 """
-
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
