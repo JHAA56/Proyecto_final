@@ -115,20 +115,23 @@ Aca vemos diferentes graficas que nos muestran tendencias y comparaciones. Despu
 ventas_por_editorial = df_ventas.groupby('DISTRIBUIDOR')['TOTAL'].sum()
 
 # Ordenar en orden descendente y seleccionar las 20 primeras
-top_15_editoriales = ventas_por_editorial.sort_values(ascending=False).head(15)
+top_15_editoriales = pd.DataFrame({'Distribuidor': ['Distribuidor A', 'Distribuidor B', 'Distribuidor C'],
+                                  'Venta total': [100, 200, 300]})
 
-# Crear el gráfico de barras
-fig, ax = plt.subplots(figsize=(12, 6))
-top_15_editoriales.plot(x='Distribuidor', y='Venta total', kind='bar', ax=ax)
-plt.title('Top 15 Distribuidor por Total venta')
+# Crear la gráfica de burbujas con etiquetas
+fig, ax = plt.subplots(figsize=(12, 8))
+colors = np.random.rand(len(top_15_editoriales))
+for i, row in top_15_editoriales.iterrows():
+    ax.scatter(row['Distribuidor'], row['Venta total'], s=row['Venta total']*5, c=colors[i], alpha=0.6)
+    ax.text(row['Distribuidor'], row['Venta total'], row['Venta total'], ha='center', va='center')
+
+plt.title('Gráfico de burbujas de los 15 principales distribuidores por ventas totales')
 plt.xlabel('Distribuidor')
 plt.ylabel('Venta total')
 plt.xticks(rotation=90)
 
 # Mostrar la gráfica en Streamlit
 st.pyplot(fig)
-
-st.set_option('deprecation.showPyplotGlobalUse', False)
   
 import pandas as pd
 import matplotlib.pyplot as plt
