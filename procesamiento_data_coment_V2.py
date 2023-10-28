@@ -126,6 +126,7 @@ plt.xticks(rotation=90)
 
 plt.show()
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
   
 import pandas as pd
 import matplotlib.pyplot as plt
