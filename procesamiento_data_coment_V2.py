@@ -123,7 +123,7 @@ plt.title('Top 15 Distribuidor por Total venta')
 plt.xlabel('Distribuidor')
 plt.ylabel('Venta total')
 plt.xticks(rotation=90)
-
+st.pyplot()
 plt.show()
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
