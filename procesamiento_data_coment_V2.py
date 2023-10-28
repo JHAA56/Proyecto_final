@@ -17,7 +17,7 @@ Lo primero que realizamos es revisar la información encontrada, familiarizarnos
 import pandas as pd
 import matplotlib.pyplot as plt
 
-ruta_df = r"Ventas_Videojuegos(2).xlsx"
+ruta_df = "Ventas_Videojuegos (2).xlsx"
 # Carga el archivo Excel en un DataFrame de pandas
 df_ventas = pd.read_excel(ruta_df)
 
